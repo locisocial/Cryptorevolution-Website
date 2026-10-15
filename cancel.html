@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cancel Your Subscription – CryptoRevolution</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face{font-family:"Playfair Display";font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/playfair-display-latin-700-normal.woff2") format("woff2")}
+  @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/inter-latin-400-normal.woff2") format("woff2")}
+  @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/inter-latin-600-normal.woff2") format("woff2")}
+  :root{--bg:#f6f6f4;--bg-2:#fff;--line:#e2e0db;--text:#1f2023;--muted:#5d5c58;--gold:#f2c94c;--gold-ink:#8a6812;
+        --serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;padding:0 20px}
+  a{color:var(--gold-ink)}
+  .wrap{max-width:760px;margin:0 auto}
+  header.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+  .brand{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
+  .brand span{color:var(--gold-ink)}
+  header nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+  main{padding-block:24px 56px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,4vw,2.5rem);line-height:1.15;margin:0 0 8px}
+  .updated{color:var(--muted);font-size:.9rem;margin:0 0 32px}
+  h2{font-size:1.15rem;margin:36px 0 8px}
+  h3{font-size:1rem;margin:24px 0 6px}
+  p,li{max-width:70ch}
+  ul{padding-left:1.2em}
+  address{font-style:normal}
+  .box{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:20px 0}
+  mark{background:#fff3c4;padding:0 3px;border-radius:3px}
+  form label{display:block;font-weight:600;font-size:.92rem;margin:16px 0 6px}
+  form input,form select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}
+  .btn{display:inline-block;margin-top:22px;padding:14px 22px;border-radius:6px;border:0;background:var(--gold);color:#1c1c1c;font:600 1rem var(--sans);cursor:pointer}
+  .btn:focus-visible,form input:focus,form select:focus{outline:2px solid var(--gold-ink);outline-offset:1px}
+  footer{border-top:1px solid var(--line);padding-block:28px 44px;color:var(--muted);font-size:.85rem}
+  footer nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="./">Crypto<span>Revolution</span>.Money</a>
+  <nav aria-label="Main"><a href="./">Home</a></nav>
+</header>
+<main>
+<h1>Cancel Your Subscription</h1>
+<p class="updated">Last updated: October 14, 2026</p>
+
+<p>You can cancel your Model Portfolio subscription here, without logging in. Fill in the details below and click "Cancel subscription now". You will receive a confirmation of your cancellation by email.</p>
+<form method="post" action="https://api.cryptorevolution.money/cancel">
+  <label for="name">Name</label>
+  <input id="name" name="name" autocomplete="name" required>
+  <label for="email">Email address used for the subscription</label>
+  <input id="email" name="email" type="email" autocomplete="email" required>
+  <label for="type">Type of cancellation</label>
+  <select id="type" name="type">
+    <option value="ordinary">Ordinary cancellation, at the earliest possible date</option>
+    <option value="extraordinary">Extraordinary cancellation for good cause</option>
+  </select>
+  <label for="date">Cancel effective (leave empty for the earliest possible date)</label>
+  <input id="date" name="date" type="date">
+  <label for="reason">Reason (required only for extraordinary cancellation)</label>
+  <input id="reason" name="reason">
+  <input class="nonce" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+  <button class="btn" type="submit">Cancel subscription now</button>
+</form>
+<p style="margin-top:28px">You can also cancel in the billing portal linked in every Model Portfolio email, or by email to <a href="mailto:contact@cryptorevolution.money">contact@cryptorevolution.money</a>.</p>
+</main>
+<footer>
+  <nav aria-label="Legal">
+    <a href="impressum.html">Impressum</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refunds.html">Refunds and withdrawal</a>
+    <a href="cancel.html">Cancel subscription</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>© 2026 Tom Snellman. Research and education, not financial, investment, legal or tax advice.</p>
+</footer>
+</div>
+</body>
+</html>
