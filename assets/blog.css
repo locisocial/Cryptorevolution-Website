@@ -1,0 +1,93 @@
+/* Blog styles for cryptorevolution.money — shared by /blog/ and every post.
+   Matches the main site: same tokens, fonts, header and footer. */
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/playfair-display-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/playfair-display-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/inter-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/inter-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/inter-latin-600-normal.woff2") format("woff2")}
+
+:root{
+  --bg:#f6f6f4; --bg-2:#ffffff; --line:#e2e0db;
+  --text:#1f2023; --muted:#5d5c58; --gold:#f2c94c; --gold-dim:#d9b23d; --gold-ink:#8a6812; --gold-tint:#fbf3d9;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7;padding:0 20px}
+a{color:var(--gold-ink)}
+.wrap{max-width:760px;margin:0 auto}
+
+header.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
+.brand span{color:var(--gold-ink)}
+.brand img{vertical-align:-4px;margin-right:9px}
+header nav{display:flex;gap:20px;flex-wrap:wrap}
+header nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+header nav a:hover,header nav a[aria-current]{color:var(--text)}
+
+main{padding-block:24px 56px}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin:0 0 10px}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+.meta{color:var(--muted);font-size:.9rem;margin:0 0 32px}
+.lead{font-size:1.15rem}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.4rem,3vw,1.75rem);line-height:1.25;margin:48px 0 12px}
+p{margin:0 0 18px}
+ul,ol{padding-left:1.3em;margin:0 0 18px}
+li{margin-bottom:8px}
+
+/* Tables scroll sideways on small screens instead of breaking the layout */
+.table{overflow-x:auto;margin:8px 0 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg-2)}
+.table table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.5}
+.table th,.table td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.table th{font-weight:600;background:#faf9f6}
+.table tr:last-child td{border-bottom:0}
+.table.wide table{min-width:640px}
+.source{font-size:.82rem;color:var(--muted);margin:0 0 18px}
+
+/* Domino chain: a numbered list styled as linked cards */
+.dominoes{list-style:none;padding:0;margin:20px 0 14px;counter-reset:d}
+.dominoes li{counter-increment:d;position:relative;background:var(--bg-2);border:1.5px dashed #c9c6bf;border-radius:10px;padding:16px 18px 16px 64px;margin:0 0 28px}
+.dominoes li::before{content:counter(d);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--muted);display:grid;place-items:center;font-weight:600;font-size:.95rem}
+.dominoes li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-24px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:10px solid #b9b5ad}
+.dominoes li.fallen{border:2px solid var(--gold-dim);background:var(--gold-tint)}
+.dominoes strong{display:block;font-size:1rem;line-height:1.4}
+.dominoes span{display:block;font-size:.92rem;line-height:1.55;margin-top:4px}
+.dominoes em{display:block;font-style:normal;font-size:.82rem;color:var(--muted);margin-top:6px}
+.legend{font-size:.82rem;color:var(--muted);margin:0 0 18px}
+
+/* Signup box */
+.signup-box{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:26px 24px;margin:44px 0 28px}
+.signup-box h2{margin:0 0 6px;font-size:1.35rem}
+.signup-box p{color:var(--muted);font-size:.95rem;margin:0 0 16px}
+form.signup{display:flex;gap:10px;flex-wrap:wrap}
+form.signup input[type=email]{flex:1 1 240px;min-width:0;padding:14px 16px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--text);font:inherit}
+form.signup input[type=email]:focus{outline:2px solid var(--gold-ink);outline-offset:1px;border-color:transparent}
+.btn{display:inline-block;padding:14px 22px;border-radius:6px;border:0;background:var(--gold);color:#1c1c1c;font:600 1rem var(--sans);cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{background:#eabd33}
+.btn:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+.fineprint{font-size:.8rem;color:var(--muted);margin:12px 0 0}
+.nonce{position:absolute;left:-9999px}
+.disclaimer{font-size:.88rem;color:var(--muted);font-style:italic}
+
+.sources{font-size:.85rem;line-height:1.55}
+.sources li{margin-bottom:6px}
+
+/* Blog index */
+.posts{list-style:none;padding:0;margin:0}
+.posts li{border-top:1px solid var(--line);padding:24px 0;margin:0}
+.posts time{font-size:.85rem;color:var(--muted)}
+.posts h2{margin:4px 0 8px;font-size:1.45rem}
+.posts h2 a{color:var(--text);text-decoration:none}
+.posts h2 a:hover{color:var(--gold-ink)}
+.posts p{color:var(--muted);margin:0}
+
+footer{border-top:1px solid var(--line);padding-block:28px 44px;color:var(--muted);font-size:.85rem;line-height:1.6}
+footer nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+footer a{color:var(--muted)}
+footer p{margin:0}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .dominoes li{padding-left:58px}
+}

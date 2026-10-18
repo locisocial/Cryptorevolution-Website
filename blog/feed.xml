@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>CryptoRevolution Blog</title>
+  <link>https://cryptorevolution.money/blog/</link>
+  <atom:link href="https://cryptorevolution.money/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Weekly research on Bitcoin, altcoins and the macro picture behind them. No hype.</description>
+  <language>en</language>
+  <lastBuildDate>Sun, 18 Oct 2026 12:00:00 GMT</lastBuildDate>
+
+  <!-- Newest item first. Copy an <item> block to the top for each new post. -->
+  <item>
+    <title>CoreWeave: The Needle in the AI Bubble?</title>
+    <link>https://cryptorevolution.money/blog/coreweave-ai-bubble/</link>
+    <guid isPermaLink="true">https://cryptorevolution.money/blog/coreweave-ai-bubble/</guid>
+    <pubDate>Sun, 18 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Bond markets price a 60% chance that CoreWeave defaults. How Korea's chip market topped first, why the Mag7 can't be isolated, and what it means for Bitcoin.</description>
+  </item>
+</channel>
+</rss>
